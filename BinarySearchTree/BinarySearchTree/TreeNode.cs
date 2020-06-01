@@ -8,5 +8,18 @@ namespace BinarySearchTree
 {
     class TreeNode
     {
+        //Member variables
+        public int data;
+        
+
+        //Constructor
+        public TreeNode()
+        {
+
+        }
+
+
+        //Methods
+       
     }
 }
