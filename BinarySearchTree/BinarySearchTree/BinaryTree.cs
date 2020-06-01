@@ -10,7 +10,7 @@ namespace BinarySearchTree
     {
         //Member variables
         public TreeNode root;
-
+        public int value;
         //Constructor
         public BinaryTree()
         {
@@ -20,9 +20,19 @@ namespace BinarySearchTree
         //Methods
         public void Add(int data)
         {
-            //if the root is null then root becomes a new node
+            if (root != null)
+            {
+                //if the root is not null then we add a node
+                root.Add(data);
+            }
+            else 
+            {
+                //if the root is null then root becomes a new node
+                root = new TreeNode(data);
+            }
 
-            //if the root is not null then we add a node
+
+
         }
 
 
