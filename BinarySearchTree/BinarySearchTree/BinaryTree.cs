@@ -22,7 +22,7 @@ namespace BinarySearchTree
         }
 
         //Methods
-        public void AddNode(int data)
+        public void Insert(int data)
         {
             if (root != null)
             {

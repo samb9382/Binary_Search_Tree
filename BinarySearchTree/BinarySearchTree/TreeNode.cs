@@ -9,7 +9,11 @@ namespace BinarySearchTree
     class TreeNode
     {
         //Member variables
-        public int data;
+        private int data;
+        public int Data
+        {
+            get { return data; }
+        }
 
         public TreeNode leftNode;
 
