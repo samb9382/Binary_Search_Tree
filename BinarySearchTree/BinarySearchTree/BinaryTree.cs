@@ -9,8 +9,12 @@ namespace BinarySearchTree
     class BinaryTree
     {
         //Member variables
-        public TreeNode root;
-        public int value;
+        private TreeNode root;
+        public TreeNode Root
+        {
+            get { return root; }
+        }
+        
         //Constructor
         public BinaryTree()
         {
@@ -30,8 +34,6 @@ namespace BinarySearchTree
                 //if the root is null then root becomes a new node
                 root = new TreeNode(data);
             }
-
-
 
         }
 
