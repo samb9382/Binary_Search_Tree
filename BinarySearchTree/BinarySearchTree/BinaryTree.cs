@@ -18,12 +18,12 @@ namespace BinarySearchTree
         }
 
         //Methods
-        public void Add(int data)
+        public void AddNode(int data)
         {
             if (root != null)
             {
                 //if the root is not null then we add a node
-                root.Add(data);
+                root.AddNode(data);
             }
             else 
             {
