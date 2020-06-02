@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.Design.Serialization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +15,7 @@ namespace BinarySearchTree
         public int Data
         {
             get { return data; }
+            set { Data = data; }
         }
         private TreeNode leftNode;
         public TreeNode LeftNode//get sets to return value for the leftNode
@@ -36,10 +39,11 @@ namespace BinarySearchTree
 
 
         //Methods
+
         public void Insert(int value)
         {
-            //if the data passed in is greater than the data add to the right node 
-            if (rightNode > data)
+            //if the value passed in is greater than the data insert to the right node 
+            if (value > data)
             {
                 if (rightNode == null) // if right child node is null create a new node
                 {
@@ -50,7 +54,7 @@ namespace BinarySearchTree
                     rightNode.Insert(value);
                 }
             }
-            else 
+            else
             {
                 if (leftNode == null) // if left node is null create a new node
                 {
@@ -58,7 +62,7 @@ namespace BinarySearchTree
                 }
                 else // if the left node is not null then add node on the left
                 {
-                    leftNode.Insert(value); 
+                    leftNode.Insert(value);
                 }
             }
         }

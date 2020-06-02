@@ -9,15 +9,14 @@ namespace BinarySearchTree
     class BinaryTree
     {
         //Member variables
-        private TreeNode root;
-        public TreeNode Root
-        {
-            get { return root; }
-        }
+        
+        public TreeNode root;
+        
         
         //Constructor
         public BinaryTree()
         {
+            root = null;
 
         }
 
@@ -43,8 +42,16 @@ namespace BinarySearchTree
 
         }
 
-        public void SearchNode()//search for specific value within the BST data structrure
+        public bool SearchNodes(TreeNode root, int searchPoint)//search for specific value within the BST data structrure
+        //if searchPoint is the same as the data then it is true
+        //if the searchPoint is less than the data look left of the root
+        //if the searchPoint is greater than the data look right of the root
         {
+            if (root == null)
+            {
+                return false;
+            }
+
             
 
         }
