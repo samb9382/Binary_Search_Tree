@@ -14,10 +14,18 @@ namespace BinarySearchTree
         {
             get { return data; }
         }
-
-        public TreeNode leftNode;
-
-        public TreeNode rightNode;
+        private TreeNode leftNode;
+        public TreeNode LeftNode//get sets to return value for the leftNode
+        {
+            get { return leftNode; }
+            set { leftNode = value; }
+        }
+        private TreeNode rightNode;
+        public TreeNode RightNode//get sets to return value for the rightNode
+        {
+            get { return rightNode; }
+            set { rightNode = value; }
+        }
         
 
         //Constructor
@@ -28,7 +36,7 @@ namespace BinarySearchTree
 
 
         //Methods
-        public void AddNode(int value)
+        public void Insert(int value)
         {
             //if the data passed in is greater than the data add to the right node 
             if (rightNode > data)
@@ -39,7 +47,7 @@ namespace BinarySearchTree
                 }
                 else // if right node is not null add node on the right
                 {
-                    rightNode.AddNode(value);
+                    rightNode.Insert(value);
                 }
             }
             else 
@@ -50,7 +58,7 @@ namespace BinarySearchTree
                 }
                 else // if the left node is not null then add node on the left
                 {
-                    leftNode.AddNode(value); 
+                    leftNode.Insert(value); 
                 }
             }
         }

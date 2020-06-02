@@ -26,8 +26,8 @@ namespace BinarySearchTree
         {
             if (root != null)
             {
-                //if the root is not null then we add a node
-                root.AddNode(data);
+                //if the root is not null then add a node
+                root.Insert(data);
             }
             else 
             {
@@ -43,7 +43,7 @@ namespace BinarySearchTree
 
         }
 
-        public void Search()//search for specific value within the BST data structrure
+        public void SearchNode()//search for specific value within the BST data structrure
         {
             
 
