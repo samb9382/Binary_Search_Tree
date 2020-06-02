@@ -33,7 +33,7 @@ namespace BinarySearchTree
             //if the data passed in is greater than the data add to the right node 
             if (rightNode > data)
             {
-                if (rightNode == null) // if right child node is null create a new one
+                if (rightNode == null) // if right child node is null create a new node
                 {
                     rightNode = new TreeNode(value);
                 }

@@ -37,6 +37,17 @@ namespace BinarySearchTree
 
         }
 
+        public void AddNode()//add new node with data onto the BST
+        {
+            
+
+        }
+
+        public void Search()//search for specific value within the BST data structrure
+        {
+            
+
+        }
 
     }
 }
