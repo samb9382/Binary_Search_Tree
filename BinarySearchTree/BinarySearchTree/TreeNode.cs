@@ -40,32 +40,7 @@ namespace BinarySearchTree
 
         //Methods
 
-        public void Insert(int value)
-        {
-            //if the value passed in is greater than the data insert to the right node 
-            if (value > data)
-            {
-                if (rightNode == null) // if right child node is null create a new node
-                {
-                    rightNode = new TreeNode(value);
-                }
-                else // if right node is not null add node on the right
-                {
-                    rightNode.Insert(value);
-                }
-            }
-            else
-            {
-                if (leftNode == null) // if left node is null create a new node
-                {
-                    leftNode = new TreeNode(value);
-                }
-                else // if the left node is not null then add node on the left
-                {
-                    leftNode.Insert(value);
-                }
-            }
-        }
+        
        
     }
 }

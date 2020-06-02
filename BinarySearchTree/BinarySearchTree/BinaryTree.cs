@@ -35,11 +35,31 @@ namespace BinarySearchTree
             }
 
         }
-
-        public void AddNode()//add new node with data onto the BST
+        public void AddNode(int value)
         {
-            
-
+            //if the value passed in is greater than the data insert to the right node 
+            if (value > data)
+            {
+                if (rightNode == null) // if right child node is null create a new node
+                {
+                    rightNode = new TreeNode(value);
+                }
+                else // if right node is not null add node on the right
+                {
+                    rightNode.AddNode(value);
+                }
+            }
+            else
+            {
+                if (leftNode == null) // if left node is null create a new node
+                {
+                    leftNode = new TreeNode(value);
+                }
+                else // if the left node is not null then add node on the left
+                {
+                    leftNode.AddNode(value);
+                }
+            }
         }
 
         public bool SearchNodes(TreeNode root, int searchPoint)//search for specific value within the BST data structrure
@@ -51,6 +71,16 @@ namespace BinarySearchTree
             {
                 return false;
             }
+            else if (searchPoint > root.data)
+            {
+                SearchNodes(root.RightNode, searchPoint);
+            }
+            else if (searchPoint < root.data)
+            {
+                SearchNodes(root.LeftNode, searchPoint);
+            }
+
+
 
             
 
